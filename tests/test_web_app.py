@@ -31,6 +31,8 @@ def test_form_submission_returns_results(client) -> None:
     body = response.get_data(as_text=True)
     assert "roi_p90" in body
     assert "Генерируемая конфигурация" in body
+    assert "metricsChart" in body
+    assert "samplesChart" in body
 
 
 def test_api_run_returns_metrics(client) -> None:
