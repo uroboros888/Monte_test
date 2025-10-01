@@ -4,6 +4,8 @@ from typing import Generator
 
 import pytest
 
+pytest.importorskip("flask")
+
 from monte.web.app import DEFAULT_DSL, create_app
 
 
